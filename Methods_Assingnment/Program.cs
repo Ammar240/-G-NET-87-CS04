@@ -20,7 +20,7 @@ internal class Program
         int pages = 400;
         AddBounusPages(pages);
         Console.WriteLine(pages); // I expect to see 400, because this method does not change the value of the variable pages,
-                                  // it only returns a new value (call by value)
+                                  // it only returns a new value (call by value for value type)
         #endregion
 
         #region question 4
@@ -34,8 +34,19 @@ internal class Program
         #region question 5
         PrintLine(5);
 
-        AddBounusPages(ref pages);
+        AddBounusPages(ref pages); // I expect to see 450, (call by reference for value type)
         Console.WriteLine(pages);
+        #endregion
+
+        #region question 6
+        PrintLine(6);
+
+        replaceArray(ref prices);
+        Console.WriteLine($"prices length: {prices.Length}");
+        for (int i = 0; i < prices.Length; i++)
+        {
+            Console.WriteLine(prices[i]);
+        }
         #endregion
     }
     #region question 1
@@ -72,6 +83,15 @@ internal class Program
         pages += 50;
         return pages;
     }
+    #endregion
+
+    #region question 6
+    static void replaceArray(ref double[] prices)
+    {
+        prices = new double[] { 10.0, 12.5, 15.0 };
+
+    }
+
     #endregion
 
     //this method for me to format output in console
