@@ -56,6 +56,14 @@ internal class Program
         Console.WriteLine($"Book is found: {isFound}");
         Console.WriteLine($"price = {price}");
         #endregion
+
+        #region question 8
+        PrintLine(8);
+   
+        PrintBookInfo("Clean Code",pages);
+        Console.WriteLine();
+        PrintBookInfo("Clean Code");
+        #endregion
     }
     #region question 1
     static void PrintWelcomeMessage()
@@ -115,6 +123,13 @@ internal class Program
             price = 0;
             return false;
         }
+    }
+    #endregion
+
+    #region question 8
+    static void PrintBookInfo(string title, int pages = 300)
+    {
+        Console.WriteLine($"Title : {title}\nPages : {pages}");
     }
     #endregion
     //this method for me to format output in console
