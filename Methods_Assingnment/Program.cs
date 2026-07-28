@@ -64,6 +64,12 @@ internal class Program
         Console.WriteLine();
         PrintBookInfo("Clean Code");
         #endregion
+
+        #region question 9
+        PrintLine(9);
+
+        PrintBookInfo(pages: 500, title: "C# in Depth");
+        #endregion
     }
     #region question 1
     static void PrintWelcomeMessage()
