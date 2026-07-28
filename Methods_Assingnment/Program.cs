@@ -20,7 +20,13 @@ internal class Program
         int total = AddBounusPages(pages);
         Console.WriteLine(pages); // I expect to see 400, because this method does not change the value of the variable pages,
                                   // it only returns a new value (call by value)
-        Console.WriteLine(total);
+        PrintLine();
+        #endregion
+
+        #region question 4
+        double[] prices = { 25.5, 40.0 }; 
+        ApplyDiscount(prices);
+        Console.WriteLine(prices[0]); // i expect to see 20.5, (call by value for refrence type)
         PrintLine();
         #endregion
     }
@@ -42,6 +48,13 @@ internal class Program
     static int AddBounusPages(int pages)
     {
         return pages + 50;
+    }
+    #endregion
+
+    #region question 4 
+    static double ApplyDiscount(double[] prices)
+    {
+        return prices[0] -= 5;
     }
     #endregion
 
