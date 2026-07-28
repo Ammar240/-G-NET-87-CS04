@@ -48,6 +48,14 @@ internal class Program
             Console.WriteLine(prices[i]);
         }
         #endregion
+
+        #region question 7
+        PrintLine(7);
+
+        bool isFound = TryGetPrice("Clean Code", out double price);
+        Console.WriteLine($"Book is found: {isFound}");
+        Console.WriteLine($"price = {price}");
+        #endregion
     }
     #region question 1
     static void PrintWelcomeMessage()
@@ -94,6 +102,21 @@ internal class Program
 
     #endregion
 
+    #region question 7
+    static bool TryGetPrice(string title, out double price)
+    {
+        if (title == "Clean Code")
+        {
+            price = 25.5;
+            return true;
+        }
+        else
+        {
+            price = 0;
+            return false;
+        }
+    }
+    #endregion
     //this method for me to format output in console
     static void PrintLine(int qNo)
     {
