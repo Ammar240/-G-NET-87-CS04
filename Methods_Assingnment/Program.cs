@@ -59,8 +59,8 @@ internal class Program
 
         #region question 8
         PrintLine(8);
-   
-        PrintBookInfo("Clean Code",pages);
+
+        PrintBookInfo("Clean Code", pages);
         Console.WriteLine();
         PrintBookInfo("Clean Code");
         #endregion
@@ -69,6 +69,11 @@ internal class Program
         PrintLine(9);
 
         PrintBookInfo(pages: 500, title: "C# in Depth");
+        #endregion
+
+        #region question 10
+        PrintLine(10);
+        PrintAllTitles("Clean Code", "C# in Depth", "The Pragmatic Programmer");
         #endregion
     }
     #region question 1
@@ -136,6 +141,16 @@ internal class Program
     static void PrintBookInfo(string title, int pages = 300)
     {
         Console.WriteLine($"Title : {title}\nPages : {pages}");
+    }
+    #endregion
+
+    #region question 10
+    static void PrintAllTitles(params string[] titles)
+    {
+        for (int i = 0; i < titles.Length; i++)
+        {
+            Console.WriteLine(titles[i]);
+        }
     }
     #endregion
     //this method for me to format output in console
